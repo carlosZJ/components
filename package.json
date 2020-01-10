@@ -1,0 +1,35 @@
+{
+  "name": "data-model-trans",
+  "version": "0.1.4",
+  "description": "model for data tansform",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "test": "babel demo --out-dir test",
+    "start": "npm-run-all --parallel watch:*",
+    "watch:build": "babel src -d lib -w",
+    "watch:test": "babel demo -d test -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosZJ/model.git"
+  },
+  "keywords": [
+    "data",
+    "model"
+  ],
+  "author": "carlos.zj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlosZJ/model/issues"
+  },
+  "homepage": "https://github.com/carlosZJ/model#readme",
+  "dependencies": {
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "npm-run-all": "^4.1.5"
+  }
+}
