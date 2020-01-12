@@ -1,16 +1,16 @@
-import Model from "../lib"
+import Model, { Models } from "../lib"
 
 class testModel extends Model {
-  id = Model.UuidDefault(this.args.id)
-  name = Model.String(this.args.nickName, "-")
-  children = Model.ModelArrayDefault(testModel, this.args.child)
+  id = Models.UuidDefault(this.args.id)
+  name = Models.String(this.args.nickName, "-")
+  children = Models.ModelArrayDefault(testModel, this.args.child)
 }
 
-const testModel2 = Model.use((args) => ({
-  id: Model.UuidDefault(args.id),
-  name: Model.String(args.nickName, "-"),
+const testModel2 = Models.use((args) => ({
+  id: Models.UuidDefault(args.id),
+  name: Models.String(args.nickName, "-"),
   other: args,
-  children: Model.ModelArrayDefault(testModel2, args.child)
+  children: Models.ModelArrayDefault(testModel2, args.child)
 }))
 
 const serverData = {

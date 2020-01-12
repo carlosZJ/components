@@ -8,12 +8,7 @@
   },
   "extends": ["react-app", "prettier"],
   "globals": {
-    "_axios": true,
-    "_": true,
     "moment": true,
-    "IconFont": true,
-    "GWYIcon": true,
-    "$": true,
     "define": true
   },
   "rules": {

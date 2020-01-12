@@ -58,7 +58,6 @@ Model.prototype._toObj = function (obj) {
       temp[item] = obj[item]._toObj()
     } else {
       temp[item] = obj[item]
-      console.warn(`"${item}" doesn't use Model type create this field.`)
     }
   }
   return temp
@@ -80,7 +79,6 @@ Model.prototype._toJS = function (obj) {
       temp[item] = obj[item]._toJS()
     } else {
       temp[item] = obj[item]
-      console.warn(`"${item}" doesn't use Model type create this field.`)
     }
   }
   return temp
