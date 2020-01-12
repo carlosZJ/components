@@ -26,18 +26,18 @@ var testModel = function (_Model) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = testModel.__proto__ || Object.getPrototypeOf(testModel)).call.apply(_ref, [this].concat(args))), _this), _this.id = _lib2.default.UuidDefault(_this.args.id), _this.name = _lib2.default.String(_this.args.nickName, "-"), _this.children = _lib2.default.ModelArrayDefault(testModel, _this.args.child), _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = testModel.__proto__ || Object.getPrototypeOf(testModel)).call.apply(_ref, [this].concat(args))), _this), _this.id = _lib.Models.UuidDefault(_this.args.id), _this.name = _lib.Models.String(_this.args.nickName, "-"), _this.children = _lib.Models.ModelArrayDefault(testModel, _this.args.child), _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   return testModel;
 }(_lib2.default);
 
-var testModel2 = _lib2.default.use(function (args) {
+var testModel2 = _lib.Models.use(function (args) {
   return {
-    id: _lib2.default.UuidDefault(args.id),
-    name: _lib2.default.String(args.nickName, "-"),
+    id: _lib.Models.UuidDefault(args.id),
+    name: _lib.Models.String(args.nickName, "-"),
     other: args,
-    children: _lib2.default.ModelArrayDefault(testModel2, args.child)
+    children: _lib.Models.ModelArrayDefault(testModel2, args.child)
   };
 });
 
